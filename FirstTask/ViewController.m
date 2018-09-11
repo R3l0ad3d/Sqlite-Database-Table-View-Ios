@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "FirstView/FirstViewController.h"
+#import "SecoundView/SecoundViewController.h"
+#import "ThirdView/ThirdViewController.h"
 
 @interface ViewController ()
 
@@ -16,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //self.storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -25,5 +29,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)firstButtonClick:(id)sender {
+    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    FirstViewController *viewController = (FirstViewController* )[storyboard instantiateViewControllerWithIdentifier:@"FirstView"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 
+- (IBAction)secoundButtonClick:(id)sender {
+    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SecoundViewController *viewController = (SecoundViewController* )[storyboard instantiateViewControllerWithIdentifier:@"SecoundView"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (IBAction)thirdButtonClick:(id)sender {
+    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ThirdViewController *viewController = (ThirdViewController* )[storyboard instantiateViewControllerWithIdentifier:@"ThirdView"];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 @end

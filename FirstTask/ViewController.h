@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)firstButtonClick:(id)sender;
+- (IBAction)secoundButtonClick:(id)sender;
+- (IBAction)thirdButtonClick:(id)sender;
 
 @end
 
