@@ -19,6 +19,7 @@
 		A8028837214697A100BF5EF3 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8028836214697A100BF5EF3 /* ThirdViewController.m */; };
 		A81709D22147845400579CF9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A81709D12147845400579CF9 /* libsqlite3.tbd */; };
 		A868F4492147AAE50001B414 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A868F4482147AAE50001B414 /* TableViewCell.m */; };
+		A868F4512147E47F0001B414 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = A868F4502147E47F0001B414 /* Database.m */; };
 		A8B751A821477F50005406AD /* SecoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B751A721477F50005406AD /* SecoundViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		A81709D12147845400579CF9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A868F4472147AAE50001B414 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		A868F4482147AAE50001B414 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		A868F44F2147E47F0001B414 /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		A868F4502147E47F0001B414 /* Database.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		A8B751A621477F50005406AD /* SecoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecoundViewController.h; sourceTree = "<group>"; };
 		A8B751A721477F50005406AD /* SecoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecoundViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +120,7 @@
 		A80287F5214695ED00BF5EF3 /* FirstTask */ = {
 			isa = PBXGroup;
 			children = (
+				A868F44E2147E3CF0001B414 /* ModelClass */,
 				A80287F9214695ED00BF5EF3 /* ViewController.h */,
 				A80287FA214695ED00BF5EF3 /* ViewController.m */,
 				A802882E2146976900BF5EF3 /* FirstView */,
@@ -194,6 +198,15 @@
 				A81709D12147845400579CF9 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A868F44E2147E3CF0001B414 /* ModelClass */ = {
+			isa = PBXGroup;
+			children = (
+				A868F44F2147E47F0001B414 /* Database.h */,
+				A868F4502147E47F0001B414 /* Database.m */,
+			);
+			path = ModelClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +341,7 @@
 			files = (
 				A868F4492147AAE50001B414 /* TableViewCell.m in Sources */,
 				A80287FB214695ED00BF5EF3 /* ViewController.m in Sources */,
+				A868F4512147E47F0001B414 /* Database.m in Sources */,
 				A8028806214695F300BF5EF3 /* main.m in Sources */,
 				A8028837214697A100BF5EF3 /* ThirdViewController.m in Sources */,
 				A80287F8214695ED00BF5EF3 /* AppDelegate.m in Sources */,

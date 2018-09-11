@@ -8,7 +8,6 @@
 
 #import "FirstViewController.h"
 
-
 @interface FirstViewController ()
 
 @end
@@ -17,6 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _db=[[Database alloc] init];
+    if([_db isDatabaseExist]==NO){
+        if([_db createDatabase]==NO){
+            [self showUIAlertWithMessage:@"Failed to Create the table" andTitle:@"Error"];
+        }else{
+            [self showUIAlertWithMessage:@"Table Create Success" andTitle:@"Message"];
+        }
+        
+    }
+   /*
     // Do any additional setup after loading the view.
     NSString *docsdir;
     NSArray *dirPaths;
@@ -44,7 +54,7 @@
         }else{
             [self showUIAlertWithMessage:@"Failed to open/create table" andTitle:@"Error"];
         }
-    }
+    }*/
 }
 
 -(void) showUIAlertWithMessage:(NSString*)message 	andTitle:(NSString*)title{
@@ -75,7 +85,7 @@
 */
 
 - (IBAction)submitToDatabase:(id)sender {
-    sqlite3_stmt *stmt;
+    /*sqlite3_stmt *stmt;
     const char *dbpath=[_databasePath UTF8String];
     if(sqlite3_open(dbpath, &_DB)==SQLITE_OK){
         NSString *insertSQL=[NSString stringWithFormat:@"INSERT INTO user (name) VALUES (\"%@\")",_myTextbox.text];
@@ -88,6 +98,12 @@
             [self showUIAlertWithMessage:@"Failed to add the user" andTitle:@"Error"];
         }
         sqlite3_close(_DB);
+    }*/
+    if([_db addDataToDatabase:_myTextbox.text]==YES){
+        [self showUIAlertWithMessage:@"User add to database " andTitle:@"Message"];
+        _myTextbox.text=@"";
+    }else{
+        [self showUIAlertWithMessage:@"Failed to add the user" andTitle:@"Error"];
     }
 }
 @end
